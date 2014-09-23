@@ -22,6 +22,9 @@
 		0DFF401E19D0D659009C3855 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFF3FFD19D0D659009C3855 /* UIKit.framework */; };
 		0DFF402619D0D659009C3855 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DFF402419D0D659009C3855 /* InfoPlist.strings */; };
 		0DFF402819D0D659009C3855 /* MyFavsBandsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFF402719D0D659009C3855 /* MyFavsBandsTests.m */; };
+		0DFF403519D0EBD5009C3855 /* Ariana Grande.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DFF403219D0EBD5009C3855 /* Ariana Grande.jpg */; };
+		0DFF403619D0EBD5009C3855 /* Lana Del Rey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DFF403319D0EBD5009C3855 /* Lana Del Rey.jpg */; };
+		0DFF403719D0EBD5009C3855 /* Marina and The Diamonds.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DFF403419D0EBD5009C3855 /* Marina and The Diamonds.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		0DFF402319D0D659009C3855 /* MyFavsBandsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyFavsBandsTests-Info.plist"; sourceTree = "<group>"; };
 		0DFF402519D0D659009C3855 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0DFF402719D0D659009C3855 /* MyFavsBandsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFavsBandsTests.m; sourceTree = "<group>"; };
+		0DFF403219D0EBD5009C3855 /* Ariana Grande.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ariana Grande.jpg"; sourceTree = "<group>"; };
+		0DFF403319D0EBD5009C3855 /* Lana Del Rey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lana Del Rey.jpg"; sourceTree = "<group>"; };
+		0DFF403419D0EBD5009C3855 /* Marina and The Diamonds.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Marina and The Diamonds.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 		0DFF3FED19D0D659009C3855 = {
 			isa = PBXGroup;
 			children = (
+				0DFF403119D0EB63009C3855 /* Photos */,
 				0DFF3FFF19D0D659009C3855 /* MyFavsBands */,
 				0DFF402119D0D659009C3855 /* MyFavsBandsTests */,
 				0DFF3FF819D0D659009C3855 /* Frameworks */,
@@ -115,6 +122,7 @@
 		0DFF3FFF19D0D659009C3855 /* MyFavsBands */ = {
 			isa = PBXGroup;
 			children = (
+				0DFF403819D0ED3D009C3855 /* iPad */,
 				0DFF400819D0D659009C3855 /* MyfavBandsAppDelegate.h */,
 				0DFF400919D0D659009C3855 /* MyfavBandsAppDelegate.m */,
 				0DFF400B19D0D659009C3855 /* Main.storyboard */,
@@ -155,6 +163,23 @@
 				0DFF402419D0D659009C3855 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0DFF403119D0EB63009C3855 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				0DFF403219D0EBD5009C3855 /* Ariana Grande.jpg */,
+				0DFF403319D0EBD5009C3855 /* Lana Del Rey.jpg */,
+				0DFF403419D0EBD5009C3855 /* Marina and The Diamonds.jpg */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
+		0DFF403819D0ED3D009C3855 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +261,10 @@
 			files = (
 				0DFF401519D0D659009C3855 /* Images.xcassets in Resources */,
 				0DFF400419D0D659009C3855 /* InfoPlist.strings in Resources */,
+				0DFF403719D0EBD5009C3855 /* Marina and The Diamonds.jpg in Resources */,
+				0DFF403519D0EBD5009C3855 /* Ariana Grande.jpg in Resources */,
 				0DFF400D19D0D659009C3855 /* Main.storyboard in Resources */,
+				0DFF403619D0EBD5009C3855 /* Lana Del Rey.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +414,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFavsBands/MyFavsBands-Prefix.pch";
 				INFOPLIST_FILE = "MyFavsBands/MyFavsBands-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -399,7 +429,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFavsBands/MyFavsBands-Prefix.pch";
 				INFOPLIST_FILE = "MyFavsBands/MyFavsBands-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

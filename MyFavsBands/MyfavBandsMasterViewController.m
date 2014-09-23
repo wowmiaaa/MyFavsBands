@@ -16,20 +16,22 @@
 @end
 
 @implementation MyfavBandsMasterViewController
-
+//1) Add Synthesize
+@synthesize list;
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+	//2) Replace ALL existing code with below array load
+    self.title = @"My Favorite Bands";
+    NSArray *listArray = [[NSArray alloc] initWithObjects:@"Lana Del Rey", @"Marina and The Diamonds", @"Ariana Grande",nil];
+    self.list = listArray;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,15 +59,18 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    
+    //3 Modify Return for menu array
+    return [list count];
+    //return _objects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    //4) Replace existing code with below code
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.textLabel.text = [list objectAtIndex:[indexPath row]];
     return cell;
 }
 
@@ -103,11 +108,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
-    }
+    //5 Replace existing code with below to setproductname and send //to seque object item user clicked on menu
+    //  Error will go away soon...keep going
+    [segue.destinationViewController  setProductName:[list objectAtIndex:[self.tableView.indexPathForSelectedRow row]]];
+    
 }
 
 @end
